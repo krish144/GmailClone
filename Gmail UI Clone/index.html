@@ -1,0 +1,3170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Clone</title>
+
+    <!-- CSS Links -->
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Gmail icon -->
+
+    <link
+      rel="shortcut icon"
+      href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+
+      <div class="header-left">
+        <span class="material-icons"> menu </span>
+        <a href="#" class="logo">
+          <img
+            class="icons"
+            src="./assets/img/logo_gmail.png"
+            alt="gmail-logo"
+          />
+        </a>
+      </div>
+
+      <div class="header-right">
+        <div class="input">
+          <input type="text" placeholder="Search mail" class="input-box" />
+          <span class="material-icons" id="search"> search </span>
+          <span class="material-icons" id="tune"> tune </span>
+        </div>
+        <div class="header-setting">
+          <span class="material-icons"> help_outline </span>
+          <span class="material-icons">settings</span>
+          <span class="material-icons"> apps </span>
+          <span class="material-icons"> account_circle </span>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Main -->
+
+    <main class="main">
+      <!-- LeftBar -->
+
+      <div class="left-bar">
+        <div id="compose" class="compose-item">
+          <span class="material-icons-outlined"> edit </span>
+          <span class="compose-hidden">Compose</span>
+        </div>
+
+        <div class="features">
+
+          <div class="feature-items" id="inbox">
+            <span class="material-icons"> inbox </span>
+            <span class="hidden-feature"><strong>Inbox</strong></span>
+            <span class="no-message">3,256</span>
+          </div>
+
+          <div class="feature-items" id="starred">
+            <span class="material-icons-outlined"> grade </span>
+            <span class="hidden-feature">Starred</span>
+          </div>
+
+          <div class="feature-items" id="snoozed">
+            <span class="material-icons-outlined"> watch_later </span>
+            <span class="hidden-feature">Snoozed</span>
+          </div>
+
+          <div class="feature-items" id="send">
+            <span class="material-icons-outlined"> send </span>
+            <span class="hidden-feature">Sent</span>
+          </div>
+
+          <div class="feature-items" id="drafts">
+            <span class="material-icons-outlined"> description </span>
+            <span class="hidden-feature"><strong>Drafts</strong></span>
+            <span class="no-message">9</span>
+          </div>
+
+          <div class="feature-items" id="more">
+            <span class="material-icons-outlined"> expand_more </span>
+            <span class="hidden-feature">More</span>
+          </div>
+
+        </div>
+
+        <div class="labels">
+          <span class="hidden-label">Label</span>
+          <span class="material-icons-outlined"> add </span>
+        </div>
+      </div>
+
+      <!-- Content -->
+
+      <div class="main-content">
+        <!-- Content Header -->
+
+        <div class="content-header">
+
+          <div class="content-left">
+            <input type="checkbox" class="content-checkbox" />
+            <span class="material-icons-outlined" id="content-down">
+              arrow_drop_down
+            </span>
+            <span class="material-icons-outlined" id="content-refresh">
+              refresh
+            </span>
+            <span class="material-icons-outlined"> more_vert </span>
+          </div>
+
+          <div class="content-right">
+            <span class="page">1-50 of 3,603</span>
+
+            <span class="material-icons-outlined" id="content-left">
+              chevron_left
+            </span>
+
+            <span class="material-icons-outlined"> chevron_right </span>
+            <span class="material-icons"> keyboard </span>
+
+            <span class="material-icons-outlined" id="content-down">
+              arrow_drop_down
+            </span>
+          </div>
+        </div>
+
+        <!-- Content Body -->
+
+        <div class="p">
+
+          <div class="inbox-content">
+
+            <div class="inbox-content-header">
+
+              <div class="primary">
+                <span class="material-icons"> inbox </span> <span>Primary</span>
+              </div>
+
+              <div class="promotions">
+                <span class="material-icons-outlined"> local_offer </span>
+                Promotions
+              </div>
+
+              <div class="social">
+                <span class="material-icons-outlined"> people </span>
+                Social
+              </div>
+
+            </div>
+
+            <!-- Messages -->
+
+            <div class="inbox-content-body">
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Facebook</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new friend</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Instagram</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Youtube</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new Subscriber</span>
+                    <span class="message-description"
+                      >- Lorem ipsum sit Lorem ipsum amet. Lorem ipsum dolor
+                      sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="message-box" id="message">
+                <div class="message-details">
+                  <div class="message-details-left">
+                    <div class="hover" id="hover-dots">
+                      <span class="material-icons-outlined">
+                        drag_indicator
+                      </span>
+                    </div>
+                    <div class="hover">
+                      <input type="checkbox" class="message-input" />
+                    </div>
+                    <div class="hover" id="grade">
+                      <span class="material-icons-outlined"> grade </span>
+                    </div>
+                    <p class="message-sender">Twitter</p>
+                  </div>
+
+                  <div class="message-details-right">
+                    <span class="message-header">You got a new follower</span>
+                    <span class="message-description"
+                      >- Lorem ipsum dolor sit Lorem ipsum amet. Lorem ipsum
+                      dolor sit, amet consectetur adipisicing elit...
+                    </span>
+                  </div>
+                </div>
+
+                <div class="message-time" id="message-time">
+                  <p class="time">10.45PM</p>
+                </div>
+
+                <div class="message-icons" id="icons">
+                  <div class="hover">
+                    <span class="material-icons-outlined"> archive </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> delete </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> mail </span>
+                  </div>
+                  <div class="hover">
+                    <span class="material-icons-outlined"> watch_later </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content Footer -->
+
+              <div class="content-footer">
+                <div class="footer-1">
+                  <div class="range">
+                    <div class="inner"></div>
+                  </div>
+                  <a href="#" class="usage"
+                    >1.24 GB of 24 GB used
+                    <span class="material-icons-outlined">
+                      open_in_new
+                    </span></a
+                  >
+                </div>
+                <div class="footer-2">
+                  <ul class="footer-list">
+                    <li class="footer-list-item">
+                      <a href="#" class="footer-list-links">Terms</a>
+                    </li>
+                    <li class="footer-list-item">&#x2022;</li>
+                    <li class="footer-list-item">
+                      <a href="#" class="footer-list-links">Privacy</a>
+                    </li>
+                    <li class="footer-list-item">&#x2022;</li>
+                    <li class="footer-list-item">
+                      <a href="#" class="footer-list-links">Program Policies</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-3">
+                  <p class="details">Last account activity : 1hour ago</p>
+                  <a href="#" class="footer-link">Details</a>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      
+    </main>
+
+    <!-- Script -->
+
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
