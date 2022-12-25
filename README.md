@@ -5,7 +5,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://my-gmail-clone-wesite.netlify.app/">
+    <a href="https://my-gmail-ui-clone.netlify.app/">
       Gmail UI Clone
     </a>
     <span> | </span>
